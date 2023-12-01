@@ -15,13 +15,11 @@ func main() {
 	fmt.Printf("%T",response)
 	defer response.Body.Close()
 	databytes,err := io.ReadAll(response.Body)
-	checkerr(err);
+    if err!=nil{
+		panic(err)
+	}
 	content := string(databytes)
 	fmt.Println(content)
 
 }
-func checkerr(err error){
-	if err!=nil{
-		panic(err)
-	}
-}
+
