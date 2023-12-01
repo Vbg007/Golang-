@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-
 )
 
 const url ="https://www.yahoo.com/"
